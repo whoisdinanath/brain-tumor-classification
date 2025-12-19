@@ -1,0 +1,14 @@
+-- 1. Add specific entry for MikroTik router
+INSERT INTO nas (nasname, shortname, type, secret, description)
+VALUES ('192.168.222.2', 'mikrotik-main', 'mikrotik', 'SumanMHZ0956', 'Main MikroTik Router');
+
+-- 2. Add specific entry for UniFi controller/AP
+INSERT INTO nas (nasname, shortname, type, secret, description)
+VALUES ('10.10.100.105', 'unifi-controller', 'other', 'SumanMHZ0956', 'UniFi Controller');
+
+-- 3. Update the existing catch-all for everything else
+UPDATE nas 
+SET type = 'other', 
+    secret = 'SumanMHZ0956',
+    description = 'Universal catch-all for other devices'
+WHERE nasname = '0.0.0.0/0';
