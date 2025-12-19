@@ -1,0 +1,30 @@
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Models
+models/
+notebooks/models/
+*.pth
+*.pt
+
+# Dataset
+brisc2025/
+data/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+
+# Jupyter
+.ipynb_checkpoints/
+reports/
+brisc2025/
+
+# Checkpoints folders
+**/checkpoints/
+checkpoints/
+notebooks/models/
